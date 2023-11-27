@@ -88,12 +88,12 @@
   },
   "private": true,
   "scripts": {
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "build": "webpack --config webpack.config.js",
     "predeploy": "npm run build",
     "bootstrap": "cross-env COMPILER_OPTIONS=\"GATSBY_MAJOR=5\" npm-run-all -s \"lerna-prepare -- --{@}\" --",
     "check-repo-fields": "node scripts/check-repo-fields.js",
     "check-versions": "node scripts/check-versions.js",
-    "deploy": "gh-pages -d build",
     "format": "npm run format:code && npm run format:other",
     "format:code": "npm run lint:code -- --fix",
     "format:other": "npm run prettier -- --write",
