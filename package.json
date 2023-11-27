@@ -88,7 +88,7 @@
   },
   "private": true,
   "scripts": {
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b main",
     "build": "webpack --config webpack.config.js",
     "predeploy": "npm run build",
     "bootstrap": "cross-env COMPILER_OPTIONS=\"GATSBY_MAJOR=5\" npm-run-all -s \"lerna-prepare -- --{@}\" --",
