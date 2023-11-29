@@ -88,7 +88,7 @@
   },
   "private": true,
   "scripts": {
-    "deploy": "gh-pages -d public -b gh-pages https://x-access-token:${GITHUB_TOKEN}@github.com/devsecguy/gatsby.git",
+    "deploy": "gh-pages -d public -b gh-pages -r https://devsecguy:${GITHUB_TOKEN}@github.com/devsecguy/gatsby.git",
     "build": "webpack --config webpack.config.js",
     "bootstrap": "cross-env COMPILER_OPTIONS=\"GATSBY_MAJOR=5\" npm-run-all -s \"lerna-prepare -- --{@}\" --",
     "check-repo-fields": "node scripts/check-repo-fields.js",
